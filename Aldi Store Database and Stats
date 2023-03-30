@@ -1,0 +1,59 @@
+--Create an Aldi Store Database--
+
+CREATE TABLE ALDI(ID INTEGER PRIMARY KEY, Item TEXT, Section TEXT, Aisle INTEGER, Price INTEGER, Popularity INTEGER);
+
+
+INSERT INTO ALDI VALUES (1, 'Milk', 'Dairy', 6, 5.69, 70);
+
+INSERT INTO ALDI VALUES (2, 'Ice Cream', 'Dairy', 7, 4.55, 68);
+
+INSERT INTO ALDI VALUES (3, 'Butter', 'Dairy', 5, 3.99, 46);
+
+INSERT INTO ALDI VALUES (4, 'Yogurt', 'Dairy', 5, 1.99, 64);
+
+INSERT INTO ALDI VALUES (5, 'Pizza', 'Dinner', 8, 2.49, 101);
+
+INSERT INTO ALDI VALUES (6, 'Microwave Dinner', 'Dinner', 8, 1.99, 89); 
+
+INSERT INTO ALDI VALUES (7, 'Potatoes', 'Produce', 1, 5.99, 78);
+
+INSERT INTO ALDI VALUES (8, 'Green Beans', 'Produce', 1, 2.59, 37);
+
+INSERT INTO ALDI VALUES (9, 'Broccoli', 'Produce', 1, 3.56, 46);
+
+INSERT INTO ALDI VALUES (10, 'M&Ms', 'Candy', 10, 5.64, 87);
+
+INSERT INTO ALDI VALUES (11, 'Kit Kat', 'Candy', 10, 4.23, 99);
+
+INSERT INTO ALDI VALUES (12, 'Sunflowers', 'Floral', 16, 1.99, 74);
+
+INSERT INTO ALDI VALUES (13, 'Succulent', 'Floral', 16, 3.46, 85);
+
+INSERT INTO ALDI VALUES (14, 'Muffins', 'Bakery', 12, 5.99, 56); 
+
+INSERT INTO ALDI VALUES (15, 'Garlic Bread', 'Bakery', 12, 3.48, 96);
+
+
+--Display the whole Database--
+SELECT * FROM ALDI;
+
+
+--Display database order by price descending--
+SELECT * FROM ALDI
+ORDER BY PRICE DESC;
+
+
+--What is the average price from all products in Aldi Database?-- 
+SELECT AVG(PRICE) FROM ALDI; 
+
+
+--What is the 10 most popular items?--
+SELECT ITEM, PRICE, POPULARITY FROM ALDI ORDER BY POPULARITY DESC
+LIMIT 10;
+
+
+--What is the sum of all items in Aldi?-- 
+SELECT SUM(PRICE) FROM ALDI; 
+
+
+
